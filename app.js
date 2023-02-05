@@ -15,10 +15,13 @@ async function getAdvice(){
     try {
         id = res.slip.id
     advice = res.slip.advice
-    adviceNo.innerHTML = id
-    adviceHTML.innerHTML = `"${advice}"`
+        populateUI()
     } catch (error) {
         console.log(error)
     }
 }
 
+function populateUI(){
+    adviceNo.innerHTML = id
+    adviceHTML.innerHTML = `"${advice}"`
+}
