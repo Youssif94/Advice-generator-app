@@ -12,9 +12,13 @@ let id,
     advice;
 async function getAdvice(){
     const res = await (await fetch('https://api.adviceslip.com/advice')).json()
-    id = res.slip.id
+    try {
+        id = res.slip.id
     advice = res.slip.advice
     adviceNo.innerHTML = id
     adviceHTML.innerHTML = `"${advice}"`
+    } catch (error) {
+        console.log(error)
+    }
 }
 
