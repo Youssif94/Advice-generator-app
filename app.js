@@ -11,10 +11,11 @@ dice.addEventListener('click',getAdvice)
 let id,
     advice;
 async function getAdvice(){
-    const res = await (await fetch('https://api.adviceslip.com/advice')).json()
+    // const res = await (await fetch('https://api.adviceslip.com/advice')).json()
+    const res = await (await fetch('https://www.boredapi.com/api/activity/')).json()
     try {
-        id = res.slip.id
-    advice = res.slip.advice
+    // id = res.slip.id
+    advice = res.activity
         populateUI()
     } catch (error) {
         console.log(error)
