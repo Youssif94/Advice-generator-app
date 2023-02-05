@@ -54,3 +54,7 @@ h3,span{
 p{
     font-size: 24px;
 }
+
+i{
+    cursor: pointer;
+}
